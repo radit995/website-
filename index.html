@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Bebek Genem</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Navigasi Header -->
+<header class="bg-dark position-sticky top-0 w-100 shadow-lg" style="z-index: 1050;">
+  <nav class="navbar navbar-expand-lg container-fluid py-3">
+      <div class="container">
+          <a class="navbar-brand fw-bold text-uppercase text-warning" href="#" style="font-size: 1.8rem; letter-spacing: 2px;">
+            <img class="me-2" src="data_gambar/duck.png" alt="" style="height: 50px;">Bebek Genem
+          </a>
+          <button class="navbar-toggler" type="button" style="background-color: #ffff;" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav gap-3">
+                  <li class="nav-item">
+                      <a class="nav-link text-white fw-semibold position-relative" href="index.html">Beranda</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white fw-semibold position-relative" href="tentang.html">Tentang Kami</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white fw-semibold position-relative" href="menu.html">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white fw-semibold position-relative" href="kontak.html">Kontak</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+</header>
+
+    <section class="hero-section text-center">
+        <div class="hero-content">
+            <h2 class="fw-bold">Selamat Datang di Bebek Genem</h2>
+            <p>Rasakan kelezatan bebek dengan cita rasa khas.</p>
+            <a href="menu.html" class="btn btn-primary">Lihat Menu</a>
+        </div>
+    </section>
+    <div class="container py-5" id="menu">
+      <h2 class="text-center fw-bold">Temukan menu favoritmu.</h2>
+      <p class="text-center text-muted">Temukan berbagai menu favorit terbaik kami di bawah ini.</p>
+      <div class="row mt-4">
+          <!-- Card Menu 1 -->
+          <div class="col-md-4 mb-4">
+              <div class="card shadow border-0">
+                  <img src="data_gambar/data14.jpg" class="card-img-top" alt="Bebek Goreng">
+                  <div class="card-body text-center">
+                      <h5>Bebek Goreng</h5>
+                      <button class="btn btn-success" onclick="pesanSekarang('Bebek Goreng')">Pesan Sekarang</button>
+                  </div>
+              </div>
+          </div>
+          <!-- Card Menu 2 -->
+          <div class="col-md-4 mb-4">
+              <div class="card shadow border-0">
+                  <img src="data_gambar/data17.jpg" class="card-img-top" alt="Belut Bakar">
+                  <div class="card-body text-center">
+                      <h5>Belut Bakar</h5>
+                      <button class="btn btn-success" onclick="pesanSekarang('Belut Bakar')">Pesan Sekarang</button>
+                  </div>
+              </div>
+          </div>
+          <!-- Card Menu 3 -->
+          <div class="col-md-4 mb-4">
+              <div class="card shadow border-0">
+                  <img src="data_gambar/data15.jpg" class="card-img-top" alt="Nasi Kuning Tumpeng">
+                  <div class="card-body text-center">
+                      <h5>Nasi Kuning Tumpeng</h5>
+                      <button class="btn btn-success" onclick="pesanSekarang('Nasi Kuning Tumpeng')">Pesan Sekarang</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Pop-up Order -->
+  <div id="orderPopup" class="popup-container">
+      <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h4>Pesan Sekarang</h4>
+          <p id="orderText"></p>
+          <a id="waLink" href="#" target="_blank" class="btn btn-success">Pesan via WhatsApp</a>
+      </div>
+  </div>
+  
+  <script>
+      function pesanSekarang(menuName) {
+          document.getElementById("orderText").innerText = "Anda akan memesan " + menuName + ". Klik tombol di bawah untuk melanjutkan.";
+          document.getElementById("waLink").href = "https://wa.me/6281240549500?text=Saya%20ingin%20memesan%20" + encodeURIComponent(menuName);
+          document.getElementById("orderPopup").style.display = "flex";
+      }
+      
+      function closePopup() {
+          document.getElementById("orderPopup").style.display = "none";
+      }
+  </script>
+      
+      
+
+    
+    <div class="container py-5" id="menu">
+        <h2 class="text-center fw-bold">Temukan menu populer.</h2>
+        <p class="text-center text-muted">Temukan berbagai menu populer terbaik kami di bawah ini.</p>
+        <div class="row mt-4">
+            <!-- Card Menu 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow border-0">
+                    <img src="data_gambar/data11.jpg" class="card-img-top" alt="Bebek Goreng">
+                    <div class="card-body text-center">
+                        <h5>Belut Bakar</h5>
+                        <button class="btn btn-success" onclick="pesanSekarang('Bebek Goreng')">Pesan Sekarang</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Menu 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow border-0">
+                    <img src="data_gambar/data12.jpg" class="card-img-top" alt="Belut Bakar">
+                    <div class="card-body text-center">
+                        <h5>Nila bakar</h5>
+                        <button class="btn btn-success" onclick="pesanSekarang('Belut Bakar')">Pesan Sekarang</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Menu 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow border-0">
+                    <img src="data_gambar/data10.jpg" class="card-img-top" alt="Nasi Kuning Tumpeng">
+                    <div class="card-body text-center">
+                        <h5>Paket Bebek Goreng</h5>
+                        <button class="btn btn-success" onclick="pesanSekarang('Nasi Kuning Tumpeng')">Pesan Sekarang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Pop-up Order -->
+    <div id="orderPopup" class="popup-container">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h4>Pesan Sekarang</h4>
+            <p id="orderText"></p>
+            <a id="waLink" href="#" target="_blank" class="btn btn-success">Pesan via WhatsApp</a>
+        </div>
+    </div>
+    
+    <script>
+        function pesanSekarang(menuName) {
+            document.getElementById("orderText").innerText = "Anda akan memesan " + menuName + ". Klik tombol di bawah untuk melanjutkan.";
+            document.getElementById("waLink").href = "https://wa.me/6281240549500?text=Saya%20ingin%20memesan%20" + encodeURIComponent(menuName);
+            document.getElementById("orderPopup").style.display = "flex";
+        }
+        
+        function closePopup() {
+            document.getElementById("orderPopup").style.display = "none";
+        }
+    </script>
+    
+
+      
+
+
+<!-- Tambahkan FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- Tambahkan Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Tambahkan FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- Foto Pelanggan -->
+<h3 class="text-center fw-bold mt-5">Foto Pelanggan</h3>
+<div id="carouselPelanggan" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+                <div class="card shadow border-0" style="width: 80%; max-width: 900px; border-radius: 20px; overflow: hidden;">
+                    <img src="data_gambar/data22.jpg" class="card-img-top" alt="Foto Pelanggan 1" style="width: 100%; height: 500px; object-fit: cover; border-radius: 20px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#fotoModal1">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card shadow border-0" style="width: 80%; max-width: 900px; border-radius: 20px; overflow: hidden;">
+                    <img src="data_gambar/data23.jpg" class="card-img-top" alt="Foto Pelanggan 2" style="width: 100%; height: 500px; object-fit: cover; border-radius: 20px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#fotoModal2">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card shadow border-0" style="width: 80%; max-width: 900px; border-radius: 20px; overflow: hidden;">
+                    <img src="data_gambar/data24.jpg" class="card-img-top" alt="Foto Pelanggan 3" style="width: 100%; height: 500px; object-fit: cover; border-radius: 20px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#fotoModal3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPelanggan" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselPelanggan" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="fotoModal1" tabindex="-1" aria-labelledby="fotoModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="fotoModalLabel1">Foto Pelanggan 1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="data_gambar/data22.jpg" class="img-fluid" alt="Foto Pelanggan 1">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="fotoModal2" tabindex="-1" aria-labelledby="fotoModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="fotoModalLabel2">Foto Pelanggan 2</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="data_gambar/data23.jpg" class="img-fluid" alt="Foto Pelanggan 2">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="fotoModal3" tabindex="-1" aria-labelledby="fotoModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="fotoModalLabel3">Foto Pelanggan 3</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="data_gambar/data24.jpg" class="img-fluid" alt="Foto Pelanggan 3">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS (Pastikan sudah terhubung dengan Bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+   <!-- Footer Section dengan empat kolom -->
+   <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row">
+
+        <!-- Alamat dan Maps -->
+        <div class="col-md-3 mb-4">
+            <h5>ALAMAT</h5>
+            <p>
+              Dukuh Tunjungan Wetan<br>
+              Desa Patik<br>
+              Kec. Pulung<br>
+              Kab. Ponorogo
+            </p>
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.1917966020073!2d111.63335627460192!3d-7.874990092147251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79a798144b3a49%3A0x6df66e10155058dc!2sbebek%20goreng%20genem%20esemu!5e0!3m2!1sid!2sid!4v1740235787434!5m2!1sid!2sid" 
+                      style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+          
+<!-- Layanan Pelanggan -->
+<div class="col-md-3 mb-4">
+    <h5>LAYANAN PELANGGAN</h5>
+    <ul class="list-unstyled">
+      <li>
+        <button type="button" onclick="window.open('https://wa.me/6281240549500?text=Pemesanan%20Menu', '_blank')" class="btn btn-outline-light pressed-effect">
+          Pemesanan Menu
+        </button>
+      </li>
+      <li>Cara Pembayaran</li>
+      <li>Konfirmasi Pesanan</li>
+      <li>Proses Pengantaran</li>
+    </ul>
+  </div>
+  
+        <!-- Tentang Kami -->
+        <div class="col-md-3 mb-4">
+          <h5>TENTANG KAMI</h5>
+          <p>
+            Bebek Genem adalah restoran yang menyajikan hidangan bebek dengan cita rasa khas. Kami berkomitmen untuk memberikan pengalaman kuliner terbaik kepada pelanggan kami.
+          </p>
+        </div>
+        
+<!-- Hubungi Kami -->
+<div class="col-md-3 mb-4">
+    <h5>HUBUNGI KAMI</h5>
+    <ul class="list-unstyled">
+      <li>
+        <a href="https://wa.me/6281240549500" class="text-white text-decoration-none d-inline-flex align-items-center">
+          <i class="bi bi-whatsapp me-2"></i>
+          <span>081240549500</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bebekgorengsenggolmrotol@gmail.com" class="text-white text-decoration-none d-inline-flex align-items-center">
+          <i class="bi bi-envelope me-2"></i>
+          <span>bebekgorengsenggolmrotol@gmail.com</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/share/18FqomRZkD/" class="text-white text-decoration-none d-inline-flex align-items-center" target="_blank">
+          <i class="bi bi-facebook me-2"></i>
+          <span>Facebook</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/bebekgoreng_esemu?igsh=MWxoa2VvMWd0dGdybA==" class="text-white text-decoration-none d-inline-flex align-items-center" target="_blank">
+          <i class="bi bi-instagram me-2"></i>
+          <span>Instagram</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.tiktok.com/@bebekgorengesemu?_t=ZS-8u6PKr9V5Ig&_r=1" class="text-white text-decoration-none d-inline-flex align-items-center" target="_blank">
+          <i class="bi bi-tiktok me-2"></i>
+          <span>TikTok</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  </footer>
+  
+  <!-- Garis pemisah -->
+  <hr class="my-0" style="opacity: 0.5;">
+  
+  <!-- Copyright Section -->
+  <div class="text-center font-weight-bold p-2 bg-dark text-white">
+    <p>&copy; <span id="year"></span> by Bebek Genem</p>
+  </div>
+  
+  <script>
+    // Mengganti tahun secara otomatis
+    document.getElementById("year").textContent = new Date().getFullYear();
+        // Contoh Intersection Observer untuk kartu (jika ada)
+        document.addEventListener("DOMContentLoaded", function() {
+      let cards = document.querySelectorAll(".card");
+      let observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      }, { threshold: 0.5 });
+      cards.forEach(card => {
+        observer.observe(card);
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

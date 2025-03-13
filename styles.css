@@ -139,3 +139,7 @@
     border-radius: 50%;
     padding: 10px;
 }
+
+header, .navbar, body {
+    overflow: visible !important;
+}

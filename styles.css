@@ -140,6 +140,40 @@
     padding: 10px;
 }
 
+/* Pastikan navbar dan body tidak membatasi dropdown */
 header, .navbar, body {
     overflow: visible !important;
 }
+
+/* Atur posisi dropdown agar bisa naik ke atas */
+.navbar-nav {
+    position: relative;
+    z-index: 1100;
+}
+
+.dropdown-menu {
+    position: absolute !important;
+    z-index: 1200;
+    top: auto !important;
+    bottom: 100%; /* Muncul ke atas */
+    left: 0;
+    transform: translateY(-10px); /* Sedikit naik agar lebih terlihat */
+    visibility: visible;
+    opacity: 1;
+    max-height: 300px; /* Batasi tinggi dropdown */
+    overflow-y: auto; /* Aktifkan scrolling jika terlalu panjang */
+    background-color: #333; /* Sesuaikan warna latar */
+}
+
+/* Pastikan navbar tetap responsif */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #333;
+        z-index: 999;
+    }
+}
+

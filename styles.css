@@ -1,13 +1,27 @@
 
-        .hero-section {
-            background: url('bg1new.jpg') center/cover no-repeat;
-            position: relative;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            padding: 100px 20px;
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: fadeIn 1.5s ease-out forwards;
+.hero-section {
+    background: url('bg1new.jpg') center/cover no-repeat;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding: 100px 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.5s ease-out forwards;
+
+    /* Menentukan ukuran */
+    width: 100%; /* atau bisa gunakan nilai lain seperti 80vw */
+    height: 500px; /* Atur sesuai kebutuhan */
+}
+
+/* Animasi fadeIn */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ animation: fadeIn 1.5s ease-out forwards;
         }
         @keyframes fadeIn {
             from {

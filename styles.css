@@ -10,8 +10,8 @@
     animation: fadeIn 1.5s ease-out forwards;
 
     /* Menentukan ukuran */
-    width: 60vw; /* atau bisa gunakan nilai lain seperti 80vw */
-    height: 100vw; /* Atur sesuai kebutuhan */
+    width: 60px; /* atau bisa gunakan nilai lain seperti 80vw */
+    height: 200px; /* Atur sesuai kebutuhan */
 }
 
 /* Animasi fadeIn */

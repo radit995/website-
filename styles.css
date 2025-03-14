@@ -1,25 +1,27 @@
-
+/* Hero Section */
 .hero-section {
-    background: url('bg1new.jpg') center/cover no-repeat;
+    background: url('data_gambar/bg1new.jpg') center/cover no-repeat;
+    width: 100vw;  /* Full width sesuai viewport */
+    height: 60vh; /* Sesuai tinggi layar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     position: relative;
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     padding: 100px 20px;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeIn 1.5s ease-out forwards;
-
-    /* Menentukan ukuran */
-    width: 60px; /* atau bisa gunakan nilai lain seperti 80vw */
-    height: 200px; /* Atur sesuai kebutuhan */
+    overflow: hidden; /* Hindari scroll tidak perlu */
 }
 
-/* Animasi fadeIn */
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+/* Responsiveness untuk layar kecil */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh; /* Sesuaikan untuk layar kecil */
+        padding: 50px 10px;
     }
+}
+
 }
  animation: fadeIn 1.5s ease-out forwards;
         }

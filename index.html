@@ -91,27 +91,69 @@
       </div>
   </div>
   
-    <!-- Pop-up Order -->
-    <div id="orderPopup" class="popup-container">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <h4>Pesan Sekarang</h4>
-            <p id="orderText"></p>
-            <a id="waLink" href="#" target="_blank" class="btn btn-success">Pesan via WhatsApp</a>
-        </div>
-    </div>
-    
-    <script>
-        function pesanSekarang(menuName) {
-            document.getElementById("orderText").innerText = "Anda akan memesan " + menuName + ". Klik tombol di bawah untuk melanjutkan.";
-            document.getElementById("waLink").href = "https://wa.me/6281240549500?text=Saya%20ingin%20memesan%20" + encodeURIComponent(menuName);
-            document.getElementById("orderPopup").style.display = "flex";
-        }
-        
-        function closePopup() {
-            document.getElementById("orderPopup").style.display = "none";
-        }
-    </script>
+<!-- Pop-up Order -->
+<div id="orderPopup" class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h4>Pesan Sekarang</h4>
+    <p id="orderText"></p>
+    <a id="waLink" href="#" target="_blank" class="btn btn-success">Pesan via WhatsApp</a>
+</div>
+
+<style>
+    /* Style untuk pop-up */
+    .popup-content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        width: 400px;
+        max-width: 90%;
+        text-align: center;
+        border: 1px solid #ddd;
+        z-index: 1000;
+        display: none; /* Default disembunyikan */
+    }
+
+    /* Tombol close */
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* Style tombol */
+    .btn-success {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .btn-success:hover {
+        background-color: darkgreen;
+    }
+</style>
+
+<script>
+    function pesanSekarang(menuName) {
+        document.getElementById("orderText").innerText = "Anda akan memesan " + menuName + ". Klik tombol di bawah untuk melanjutkan.";
+        document.getElementById("waLink").href = "https://wa.me/6281240549500?text=Saya%20ingin%20memesan%20" + encodeURIComponent(menuName);
+        document.getElementById("orderPopup").style.display = "block"; // Menampilkan pop-up
+    }
+
+    function closePopup() {
+        document.getElementById("orderPopup").style.display = "none"; // Menutup pop-up
+    }
+</script>
 
       
       
@@ -154,27 +196,69 @@
         </div>
     </div>
     
-    <!-- Pop-up Order -->
-    <div id="orderPopup" class="popup-container">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <h4>Pesan Sekarang</h4>
-            <p id="orderText"></p>
-            <a id="waLink" href="#" target="_blank" class="btn btn-success">Pesan via WhatsApp</a>
-        </div>
-    </div>
-    
-    <script>
-        function pesanSekarang(menuName) {
-            document.getElementById("orderText").innerText = "Anda akan memesan " + menuName + ". Klik tombol di bawah untuk melanjutkan.";
-            document.getElementById("waLink").href = "https://wa.me/6281240549500?text=Saya%20ingin%20memesan%20" + encodeURIComponent(menuName);
-            document.getElementById("orderPopup").style.display = "flex";
-        }
-        
-        function closePopup() {
-            document.getElementById("orderPopup").style.display = "none";
-        }
-    </script>
+<!-- Pop-up Order -->
+<div id="orderPopup" class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h4>Pesan Sekarang</h4>
+    <p id="orderText"></p>
+    <a id="waLink" href="#" target="_blank" class="btn btn-success">Pesan via WhatsApp</a>
+</div>
+
+<style>
+    /* Style untuk pop-up */
+    .popup-content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        width: 400px;
+        max-width: 90%;
+        text-align: center;
+        border: 1px solid #ddd;
+        z-index: 1000;
+        display: none; /* Default disembunyikan */
+    }
+
+    /* Tombol close */
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* Style tombol */
+    .btn-success {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .btn-success:hover {
+        background-color: darkgreen;
+    }
+</style>
+
+<script>
+    function pesanSekarang(menuName) {
+        document.getElementById("orderText").innerText = "Anda akan memesan " + menuName + ". Klik tombol di bawah untuk melanjutkan.";
+        document.getElementById("waLink").href = "https://wa.me/6281240549500?text=Saya%20ingin%20memesan%20" + encodeURIComponent(menuName);
+        document.getElementById("orderPopup").style.display = "block"; // Menampilkan pop-up
+    }
+
+    function closePopup() {
+        document.getElementById("orderPopup").style.display = "none"; // Menutup pop-up
+    }
+</script>
     
 
       

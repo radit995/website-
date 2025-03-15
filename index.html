@@ -311,7 +311,27 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+<style>
+    .carousel-control-prev,
+.carousel-control-next {
+    width: 60px; /* Perbesar tombol navigasi */
+    height: 60px;
+    background-color: black; /* Warna tombol hitam */
+    border-radius: 50%; /* Bulatkan tombol */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1 !important; /* Pastikan tombol tidak transparan */
+}
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%); /* Ikon panah putih */
+    width: 30px; /* Perbesar ikon */
+    height: 30px;
+}
+
+</style>
 <!-- Modals -->
 <div class="modal fade" id="fotoModal1" tabindex="-1" aria-labelledby="fotoModalLabel1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">

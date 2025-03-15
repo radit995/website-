@@ -135,15 +135,25 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 50px; /* Ukuran tombol navigasi lebih besar */
+    height: 50px;
+    background-color: black; /* Warna hitam solid */
+    border-radius: 50%; /* Membuat tombol berbentuk bulat */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1 !important; /* Pastikan tombol tidak transparan */
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    filter: invert(100%); /* Membuat ikon panah menjadi putih */
-    background-color: #000; /* Warna latar belakang hitam solid */
-    border-radius: 50%;
-    padding: 12px; /* Padding lebih besar agar lebih nyaman diklik */
-    width: 40px; /* Ukuran panah */
-    height: 40px;
+    filter: invert(100%); /* Membuat ikon panah putih */
+    width: 24px; /* Perbesar ukuran ikon */
+    height: 24px;
 }
+
 
 
 
